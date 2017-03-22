@@ -6,12 +6,17 @@
 </head>
 <body>
 	<div id="app">
-		 <h1 v-once>{{title}}</h1>
+		 <h1>{{title}}</h1>
 	  <input type="text" v-on:input="changeTitle">
 
-	  <p>{{sayHello()}} - <a v-bind:href="link" target="_blank">Google</a></p>
+	  <p> - <a v-bind:href="link" target="_blank">Google</a></p>
 	  <hr>
 	  <p v-html="finishedLink"></p>
+	</div>
+	<div id="event">
+		<button v-on:click="increment(2)">Click Me</button>
+        <p>{{ counter }}</p>
+        <p v-on:mousemove="updateCoordinates">Coordinates: {{x}} / {{y}}</p>
 	</div>
 	<script src="app.js"></script>
 </body>
